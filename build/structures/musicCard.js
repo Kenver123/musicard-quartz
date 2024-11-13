@@ -1,4 +1,4 @@
-this.progress = progress;const canvas = require("@napi-rs/canvas");
+const canvas = require("@napi-rs/canvas");
 const { colorFetch } = require("../functions/colorFetch");
 
  //canvas.GlobalFonts.registerFromPath(`build/structures/font/circularstd-black.otf`, "circular-std");
@@ -151,9 +151,9 @@ class musicCard {
             circleCtx.fillStyle = `#${validatedColor}`;
             circleCtx.fill();
 
-            const background = await canvas.loadImage(`https://i.imgur.com/hURm0iS.png`);
+            const background = await canvas.loadImage(`https://i.ibb.co/fSzBcjC/9k.png`);
 
-            const thumbnailCanvas = canvas.createCanvas(650, 650);
+            const thumbnailCanvas = canvas.createCanvas(564, 564);
             const thumbnailCtx = thumbnailCanvas.getContext('2d');
 
             let thumbnailImage;
@@ -195,7 +195,7 @@ class musicCard {
 
 
 
-            const bg2 = await canvas.loadImage("https://i.imgur.com/ASY5GPH.png")
+            const bg2 = await canvas.loadImage("https://i.ibb.co/dP4ZCXM/ASY5GPH.png")
 
             ctx.drawImage(background, 0, 0, 1280, 450);
             ctx.drawImage(bg2, 0, 0, 1280, 450);
@@ -234,16 +234,16 @@ class musicCard {
             thumbnailMaskCtx.fillStyle = '#000'; 
             thumbnailMaskCtx.fill();
             
-          
-            thumbnailCtx.globalCompositeOperation = 'destination-in';
-            thumbnailCtx.drawImage(thumbnailMaskCanvas, 0, 0);
-            thumbnailCtx.globalCompositeOperation = 'source-over';
+      
+
+
+            
+            
             ctx.drawImage(thumbnailCanvas, 57, 105, 288, 288);
-
-
-
             ctx.drawImage(progressBarCanvas, 450, 310, 670, 25); 
             ctx.drawImage(circleCanvas, 400, 225, 1000, 1000);
+            
+
 
             return image.toBuffer('image/png');
 
@@ -292,7 +292,7 @@ class musicCard {
             circleCtx.fillStyle = `#ff0000`;
             circleCtx.fill();
 
-            const background = await canvas.loadImage(`https://i.imgur.com/cYRzWfL.png`);
+            const background = await canvas.loadImage(`https://i.ibb.co/SXnnyMz/20241113-200145.png`);
 
             const thumbnailCanvas = canvas.createCanvas(564, 564);
             const thumbnailCtx = thumbnailCanvas.getContext('2d');
@@ -401,7 +401,7 @@ class musicCard {
             circleCtx.fillStyle = `#${validatedColor}`;
             circleCtx.fill();
 
-            const background = await canvas.loadImage(`https://i.imgur.com/Kgzsiy9.png`);
+            const background = await canvas.loadImage(`https://i.ibb.co/DrNqM5y/Whats-App-Image-2024-11-10-at-20-46-15-04a9da67.jpg`);
 
             const thumbnailCanvas = canvas.createCanvas(650, 650);
             const thumbnailCtx = thumbnailCanvas.getContext('2d');
