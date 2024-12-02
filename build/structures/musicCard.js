@@ -464,7 +464,7 @@ class musicCard {
             const ctx = image.getContext('2d');
 
             // Draw the background
-            ctx.drawImage(background, 0, 0, 1700, 700);
+            ctx.drawImage(background, 0, 0, 2000, 450);
 
             // Apply fade effect between background and upper parts
             const gradient = ctx.createLinearGradient(0, 0, 0, 450);
