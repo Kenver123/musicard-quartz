@@ -29,6 +29,7 @@ class musicCard {
         this.progress = options?.progress ?? null;
         this.starttime = options?.startTime ?? null;
         this.endtime = options?.endTime ?? null;
+        this.image = options?.image ?? null;
     }
 
     setName(name) {
@@ -58,6 +59,11 @@ class musicCard {
 
     setThumbnail(thumbnail) {
         this.thumbnail = thumbnail;
+        return this;
+    }
+
+    setImage(image) {
+        this.image = image
         return this;
     }
 
@@ -151,7 +157,14 @@ class musicCard {
             circleCtx.fillStyle = `#${validatedColor}`;
             circleCtx.fill();
 
-            const background = await canvas.loadImage(`https://i.ibb.co/fSzBcjC/9k.png`);
+            const background = await canvas.loadImage(this.image, {
+                
+                requestOptions: {
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+                    }
+                }
+            });
 
             const thumbnailCanvas = canvas.createCanvas(564, 564);
             const thumbnailCtx = thumbnailCanvas.getContext('2d');
@@ -401,7 +414,15 @@ class musicCard {
             circleCtx.fillStyle = `#${validatedColor}`;
             circleCtx.fill();
 
-            const background = await canvas.loadImage(`https://i.ibb.co/DrNqM5y/Whats-App-Image-2024-11-10-at-20-46-15-04a9da67.jpg`);
+            const background = await canvas.loadImage(this.image, {
+
+                requestOptions: {
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+                    }
+                }
+
+            });
 
             const thumbnailCanvas = canvas.createCanvas(650, 650);
             const thumbnailCtx = thumbnailCanvas.getContext('2d');
